@@ -1,0 +1,138 @@
+.achievements {
+  &__title {
+    padding-top: 150px;
+    padding-bottom: 94px;
+    font-size: 40px;
+    line-height: 87.3%;
+    color: var(--color-dark);
+    @include mobile-s {
+      padding-top: 90px;
+      padding-bottom: 40px;
+    }
+  }
+
+  &__text-list {
+    &--top {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 98px;
+      @include mobile-s {
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        justify-items: center;
+        text-align: center;
+        gap: 10px;
+        padding-bottom: 10px;
+      }
+    }
+    &--btm {
+      display: flex;
+      justify-content: space-evenly;
+      gap: 75px;
+      @include mobile-s {
+        gap: unset;
+        text-align: center;
+      }
+    }
+  }
+
+  &__text-inner {
+    position: relative;
+    @include mobile {
+      font-size: 12px;
+    }
+    @include mobile-s {
+      font-size: 11px;
+    }
+  }
+}
+
+.all-width {
+  max-width: 1029px;
+}
+
+.after--figureToo::after,
+.after--figure::after,
+.after--circle::after,
+.after--circleToo::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  box-shadow: 0px 4px 10px 0px rgba(81, 74, 126, 0.4);
+  background: rgb(81, 74, 126);
+  @include mobile-s {
+    display: none;
+  }
+}
+
+.after--figure::after,
+.after--figureToo::after {
+  width: var(--after-figure-width);
+  height: var(--after-figure-width);
+}
+
+.after--circle::after,
+.after--circleToo::after {
+  width: var(--after-circle-width);
+  height: var(--after-circle-width);
+}
+
+.after--figure {
+  &::after {
+    right: -5px;
+    bottom: -7px;
+  }
+}
+.after--circle {
+  &::after {
+    top: -40px;
+    right: -52px;
+  }
+}
+
+.after--circleToo {
+  &::after {
+    top: 15px;
+    right: -40px;
+  }
+}
+.after--figureToo {
+  &::after {
+    right: -34px;
+    bottom: 13px;
+  }
+}
+
+.achievements__buttons {
+  display: flex;
+  justify-content: space-between;
+  @include mobile-s {
+    justify-content: space-around;
+  }
+}
+.achievements {
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--button-size);
+    height: var(--button-size);
+    background-color: var(--color-accent);
+    border-radius: 50%;
+    box-shadow: 0px 4px 10px 0px rgba(81, 74, 126, 0.4);
+    background: rgb(81, 74, 126);
+    margin-top: -20px;
+    transition: 0.2s ease-in;
+    @include hover {
+      opacity: 0.8;
+      transform: scale(1.1);
+    }
+    @include mobile {
+      margin-top: -15px;
+    }
+    @include mobile-s {
+      margin-top: 10px;
+    }
+  }
+}

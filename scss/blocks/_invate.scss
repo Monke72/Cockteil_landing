@@ -1,0 +1,207 @@
+.invate {
+  position: relative;
+  z-index: 3;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 67.36vw;
+    height: 411px;
+    @include desktop {
+      width: 70vw;
+    }
+    @include mobile {
+      height: 307px;
+      width: 68vw;
+    }
+    @include mobile-s {
+      width: 100%;
+      height: 295px;
+    }
+    @media (max-width: 371px) {
+      height: 318px;
+    }
+
+    background-color: var(--color-accent);
+    z-index: -1;
+    transform: translate(0, -6.5%);
+  }
+  &__window {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-bc);
+    max-width: 714px;
+    padding: 35px 52px;
+
+    @include desktop {
+      max-width: 540px;
+      padding: 28px 40px;
+    }
+
+    @include mobile {
+      max-width: 400px;
+      padding: 20px 30px;
+    }
+    @include mobile-s {
+      width: 100%;
+      margin-inline: auto;
+    }
+  }
+
+  &__window-title {
+    font-size: 20px;
+    color: var(--color-dark);
+    font-weight: 600;
+    line-height: 118%;
+    letter-spacing: 0%;
+
+    @include mobile {
+      font-size: 14px;
+    }
+    @include mobile-s {
+      font-size: 12px;
+    }
+  }
+  &__window-inputs {
+    display: flex;
+    padding-top: 40px;
+    flex-direction: column;
+    align-items: start;
+    gap: 25px;
+    @include mobile {
+      padding-top: 20px;
+    }
+  }
+
+  &__button {
+    background-color: var(--color-accent);
+    max-width: 148px;
+    color: var(--color-bc);
+    line-height: 8px;
+    letter-spacing: 0%;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-top: 38px;
+    transition-duration: 0.2s;
+
+    @include hover {
+      opacity: 0.8;
+    }
+    @include mobile {
+      margin-top: 19px;
+    }
+
+    padding: 14px 47px 14px 25px;
+    @include mobile {
+      padding: 10px 32px 10px 8px;
+      font-size: 12px;
+      max-width: 110px;
+    }
+    &::after {
+      position: relative;
+      top: -1px;
+      content: url(./../icon/arrBtn.svg);
+    }
+  }
+}
+
+.invate__window-input {
+  font-size: 12px;
+  width: 229px;
+  background-color: var(--color-bc);
+  border-bottom: 0.5px solid rgba(125, 125, 125, 0.5);
+
+  @include mobile {
+    width: 140px;
+    font-size: 10px;
+  }
+}
+.input--mail__info {
+  position: relative;
+  font-size: 8px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  &::before {
+    padding-top: 2px;
+    content: url(./../icon/Ellipse\ 5.svg);
+  }
+}
+
+.invate {
+  &__circle-bc {
+    position: absolute;
+    right: 0;
+    top: 22%;
+    border-radius: 50%;
+    width: var(--invate-circle-size);
+    aspect-ratio: 1;
+    background-color: var(--color-accent);
+    margin-right: calc(-0.5 * var(--invate-circle-size));
+
+    @include mobile-s {
+    }
+  }
+
+  &__circle-border {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    border-radius: 50%;
+    width: var(--invate-circle-border-size);
+    aspect-ratio: 1;
+    border: 1px solid var(--color-accent);
+    margin-right: calc(-0.5 * var(--invate-circle-border-size));
+
+    @include mobile-s {
+      display: none;
+    }
+  }
+}
+
+.invate {
+  &__chekbox-input {
+    position: absolute;
+    left: -999999px;
+  }
+  label {
+    cursor: pointer;
+  }
+}
+.checked {
+  position: relative;
+  top: 2px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: 1px solid var(--color-accent);
+  cursor: pointer;
+  z-index: 11;
+}
+.form {
+  &__label {
+    span {
+      position: relative;
+      font-size: 8px;
+    }
+  }
+}
+
+.any {
+  content: "✔"; //faq
+  display: block;
+  font-size: 18px;
+  line-height: 0.8;
+  color: #989898;
+  transition: all 0.2s;
+  background-color: var(--color-accent);
+}
+.invate__chekbox {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  max-width: 200px;
+}

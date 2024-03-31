@@ -1,0 +1,40 @@
+:root {
+  --color-base: #7d7d7d;
+  --color-accent: #514a7e;
+  --color-dark: #121212;
+  --color-bc: #fffdf5;
+
+  --font-size-base: 14px;
+
+  --font-family-base: Roboto;
+  --font-family-accent: BadScript;
+
+  --circle-size: 370px;
+  --after-figure-width: 28px;
+  --after-circle-width: 47px;
+  --button-size: 72px;
+  --button-slider-size: 92px;
+  --reviews-deckor-size: 360px;
+  --invate-circle-size: 200px;
+  --invate-circle-border-size: 380px;
+  --header-circle-size: 193px;
+
+  @include desktop {
+    --circle-size: 290px;
+    --reviews-deckor-size: 285px;
+    --invate-circle-border-size: 290px;
+    --invate-circle-size: 170px;
+  }
+
+  @include mobile {
+    --header-circle-size: 150px;
+  }
+  @include mobile-s {
+    --header-circle-size: 120px;
+    --button-size: 60px;
+    --invate-circle-size: 140px;
+  }
+}
+body {
+  overflow-x: hidden;
+}

@@ -1,0 +1,101 @@
+.footer {
+  li {
+    display: inline-block;
+  }
+
+  background-color: var(--color-accent);
+  margin-top: 188px;
+  color: var(--color-bc);
+  font-size: 12px;
+  a {
+    color: var(--color-bc);
+    transition-duration: 0.2s;
+    @include hover {
+      color: #9288d4;
+    }
+  }
+
+  &__info {
+    padding-block: 85px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    @include mobile {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+  }
+
+  &__info-some {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+    &__text {
+      line-height: 16px;
+    }
+  }
+
+  &__title {
+    text-wrap: nowrap;
+    font-family: Roboto-reg;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: end;
+  }
+}
+.socials {
+  &__info {
+  }
+
+  &__programm {
+    padding-block: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &__programm-item {
+  }
+
+  &__programm-link {
+  }
+
+  &__info-tel {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    &::before {
+      position: relative;
+      top: 3px;
+      content: url(./../../icon/phone-call-svgrepo-com.svg);
+    }
+  }
+
+  &__info-graph {
+    padding-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    &::before {
+      position: relative;
+      top: 3px;
+      content: url(./../../icon/time.svg);
+    }
+  }
+}
+.footer--contact {
+  max-width: 250px;
+}
+.socials__image {
+  margin-top: -2px;
+}

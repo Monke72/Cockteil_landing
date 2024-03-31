@@ -1,0 +1,9 @@
+//base
+@import "./scss/base/reset", "./scss/base/fonts", "./scss/base/mixins",
+  "./scss/base/base", "./scss/base/vars";
+
+//blocks
+@import "./scss/blocks/header", "./scss/blocks/achievements",
+  "./scss/blocks/sale", "./scss/blocks/reviews", "./scss/blocks/questions",
+  "./scss/blocks/cooperation", "./scss/blocks/invate", "./scss/blocks/footer",
+  "./scss/blocks/rating";
